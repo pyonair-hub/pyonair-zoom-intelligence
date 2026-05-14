@@ -1,0 +1,25 @@
+# Zoom Intelligence Configuration
+# Copy to .env for local development or set environment variables in production.
+
+# -- Recall.ai --
+# RECALL_API_KEY=your_recall_api_key_here
+# RECALL_API_BASE=https://us-west-2.recall.ai/api/v1
+
+# -- Anthropic (Claude) --
+# ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# -- Application --
+# HOST=0.0.0.0
+# PORT=8900
+# LOG_LEVEL=info
+# DEMO_MODE=true
+
+# -- Bot Display --
+# BOT_DISPLAY_NAME=Pyonair AI
+
+# -- Post-Meeting --
+# SUMMARY_EMAIL_ENABLED=false
+# SMTP_HOST=
+# SMTP_PORT=587
+# SMTP_USER=
+# SMTP_PASSWORD=
