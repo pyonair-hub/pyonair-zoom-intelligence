@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Detail - Pyonair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">MI</div>
+        <span class="logo-text">Meeting Intelligence</span>
+      </a>
+      <div class="header-actions">
+        <span class="demo-badge">Demo Mode</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back-link">&larr; All Meetings</a>
+
+    <div id="loading" class="loading">
+      <div class="loading-spinner"></div>
+      Loading meeting...
+    </div>
+
+    <div id="meeting-content" style="display: none;">
+      <!-- Meeting Header -->
+      <div class="meeting-header">
+        <div class="meeting-header-top">
+          <h1 id="meeting-title">Meeting</h1>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <span id="meeting-status"></span>
+            <button id="end-meeting-btn" class="btn btn-danger btn-sm" style="display: none;">End Meeting</button>
+          </div>
+        </div>
+        <div class="meeting-meta-row" id="meeting-meta"></div>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-card" id="summary-section" style="display: none;">
+        <h3>Executive Summary</h3>
+        <p></p>
+      </div>
+
+      <!-- Panels Grid -->
+      <div class="panels-grid">
+        <!-- Action Items -->
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Action Items</h3>
+            <span class="panel-count" id="action-items-count">0</span>
+          </div>
+          <div class="panel-body" id="action-items-list"></div>
+        </div>
+
+        <!-- Decisions -->
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Decisions</h3>
+            <span class="panel-count" id="decisions-count">0</span>
+          </div>
+          <div class="panel-body" id="decisions-list"></div>
+        </div>
+      </div>
+
+      <!-- Insights -->
+      <div class="panels-grid" style="grid-template-columns: 1fr;">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Key Insights</h3>
+            <span class="panel-count" id="insights-count">0</span>
+          </div>
+          <div class="panel-body" id="insights-list"></div>
+        </div>
+      </div>
+
+      <!-- Transcript -->
+      <div class="transcript-section">
+        <h2>Transcript</h2>
+        <div class="transcript-viewer" id="transcript-content">
+          <div class="loading">
+            <div class="loading-spinner"></div>
+            Loading transcript...
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/meeting-detail.js"></script>
+</body>
+</html>

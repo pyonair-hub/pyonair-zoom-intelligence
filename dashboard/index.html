@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Intelligence - Pyonair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">MI</div>
+        <span class="logo-text">Meeting Intelligence</span>
+      </a>
+      <div class="header-actions">
+        <span class="demo-badge">Demo Mode</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h1>Meetings</h1>
+      <p>AI-powered meeting transcription, insights, and action items</p>
+    </div>
+
+    <div class="join-section">
+      <form id="join-form" class="join-form">
+        <input
+          type="url"
+          id="meeting-url-input"
+          placeholder="Paste a Zoom, Google Meet, or Teams meeting URL..."
+          required
+        >
+        <button type="submit" class="btn btn-primary">Join Meeting</button>
+      </form>
+    </div>
+
+    <table class="meetings-table" id="meetings-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Meeting</th>
+          <th>Date</th>
+          <th>Duration</th>
+          <th>Status</th>
+          <th>Participants</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="meetings-body"></tbody>
+    </table>
+
+    <div class="empty-state" id="empty-state" style="display: none;">
+      <div class="empty-state-icon">&#127908;</div>
+      <h3>No meetings yet</h3>
+      <p>Paste a meeting URL above to have the AI assistant join and start transcribing.</p>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/meetings.js"></script>
+</body>
+</html>
